@@ -32,7 +32,7 @@ p {
 @media (min-width: 641px) {
     .code-container {
         margin: 1rem;
-        max-width: calc(100vw - 346px);
+        max-width: calc(100vw - 348px);
     }
 }
 
