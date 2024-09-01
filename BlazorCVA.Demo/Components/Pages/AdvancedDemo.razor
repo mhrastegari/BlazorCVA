@@ -1,0 +1,50 @@
+﻿@page "/advanced"
+@namespace BlazorCVA.Demo.Components.Pages
+
+<h3>Advanced Demo</h3>
+<br />
+<div>
+    <label for="intentSelect">Select Intent:</label>
+    <select id="intentSelect" @onchange="OnIntentChanged">
+        @foreach (Intent intent in Enum.GetValues(typeof(Intent)))
+        {
+            <option value="@intent">@intent</option>
+        }
+    </select>
+</div>
+<div>
+    <label for="sizeSelect">Select Size:</label>
+    <select id="sizeSelect" @onchange="OnSizeChanged">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+    </select>
+</div>
+<br />
+<button class="@buttonClasses">Button</button>
+<br />
+<br />
+<br />
+<details>
+    <summary style="cursor: pointer; color: blueviolet;">Show code</summary>
+    <div style="margin: 1rem;">
+        <details>
+            <summary style="cursor: pointer; color: deeppink;">Style</summary>
+            <pre style="font-family: Consolas; overflow: auto;">
+                @styleExampleCode
+            </pre>
+        </details>
+        <details>
+            <summary style="cursor: pointer; color: dodgerblue;">Razor</summary>
+            <pre style="font-family: Consolas; overflow: auto;">
+                @razorExampleCode
+            </pre>
+        </details>
+        <details>
+            <summary style="cursor: pointer; color: forestgreen;">CSharp</summary>
+            <pre style="font-family: Consolas; overflow: auto;">
+                @csharpExampleCode
+            </pre>
+        </details>
+    </div>
+</details>
