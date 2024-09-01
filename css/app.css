@@ -6,7 +6,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html, body, #app-container {
+html, body, #app {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -27,6 +27,13 @@ h1, h2, h3, h4, h5 {
 
 p {
     margin: 0;
+}
+
+@media (min-width: 641px) {
+    .code-container {
+        margin: 1rem;
+        max-width: calc(100vw - 346px);
+    }
 }
 
 #blazor-error-ui {
